@@ -1,6 +1,6 @@
 # toki pona programming language
 
-## Hellow world: 󱥬 󱥔
+## Hello world: 󱥬 󱥔
 
 ```
 o toki e "ma ale o, toki!"
