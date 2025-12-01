@@ -110,3 +110,9 @@ pali sike {
 ## Basic Types (TODO)
 ## Custom types (TODO)
 ## Import, grouping functionality (TODO)
+
+
+### Reference
+
+* The gcc frontend is built using following this tutorial:
+  https://thinkingeek.com/2016/01/06/tiny-gcc-front-part-1/

@@ -1,0 +1,4 @@
+[submodule "gcc"]
+	path = gcc
+	url = git@github.com:danigm/gcc.git
+	branch = toki
