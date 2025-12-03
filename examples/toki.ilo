@@ -1,3 +1,26 @@
+nasin li nimi toki_pona {
+    o toki e "toki pona"
+}
+
 nasin li nimi open {
-    o toki e "ma ale o, toki!"
+    o toki e "ma ale o, toki!" e pini
+
+    # var declaration
+    nimi nanpa li 5
+    o toki e "nanpa li " e nanpa e pini
+
+    # var assignement and basic operation
+    nimi nanpa li 2
+    nimi wan li 1
+    o toki e "tu en wan li seme e " e nanpa + wan e pini
+
+    # if statement
+    # (nanpa == wan) la {
+    #     o toki e "nanpa li seme e wan"
+    # } ante {
+    #     o toki e "nanpa li seme ala e wan"
+    # }
+
+    # loop statement
+    # function call statement
 }
