@@ -119,7 +119,7 @@ If-else:
 ```
 (EXPR) la {
     EXPR*
-} anu {
+} ante {
     EXPR*
 }
 ```
