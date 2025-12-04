@@ -6,15 +6,18 @@ nasin li nimi open {
     o toki e "ma ale o, toki!" e pini
 
     # var declaration
+    o toki e pini
     nimi nanpa li 5
     o toki e "nanpa li " e nanpa e pini
 
     # var assignement and basic operation
+    o toki e pini
     nimi nanpa li 2
     nimi wan li 1
     o toki e "tu en wan li seme e " e nanpa + wan e pini
 
     # if statement
+    o toki e pini
     (nanpa = wan) la {
         o toki e "nanpa li seme e wan" e pini
     } ante {
@@ -22,6 +25,7 @@ nasin li nimi open {
     }
 
     # Booleans
+    o toki e pini
     nimi nimi_lon li lon
     nimi nimi_ala li lon ala
 
@@ -35,5 +39,31 @@ nasin li nimi open {
     }
 
     # loop statement
+    o toki e pini
+    o toki e "nanpa li lili luka la o sin" e pini
+    nimi nanpa li 0
+    o sin e ni {
+        o toki e " - sin la nanpa li " e nanpa e pini
+        nimi nanpa li (nanpa + 1)
+        (nanpa = 5) la {
+            o toki e " - o pini" e pini
+            o pini
+        }
+    }
+
+    # deep loop statement
+    o toki e pini
+    nimi nanpa1 li 0
+    o sin e ni {
+        (nanpa1 = 3) la { o pini }
+        nimi nanpa2 li 0
+        o sin e ni {
+            o toki e " - sin la nanpa mute li " e nanpa1 e " e " e nanpa2 e pini
+            nimi nanpa2 li (nanpa2 + 1)
+            (nanpa2 = 3) la { o pini }
+        }
+        nimi nanpa1 li (nanpa1 + 1)
+    }
+
     # function call statement
 }
