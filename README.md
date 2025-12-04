@@ -96,18 +96,40 @@ nimi nanpa_tomo li 23
 nimi lipu_mi li mute "doc1.txt" e "doc2.txt" e "doc3.txt"
 ```
 
-## Loops (TODO)
+## Loops
 
 Definition:
 ```
-pali sike {
+o sin e ni {
     EXPR*
     pakala
 }
 ```
 
-## Conditional (TODO)
-## Basic Types (TODO)
+## Conditional
+
+Definition:
+```
+(EXPR) la {
+    EXPR*
+}
+```
+
+If-else:
+```
+(EXPR) la {
+    EXPR*
+} anu {
+    EXPR*
+}
+```
+
+## Basic Types
+
+ * string: "abc"
+ * integer: 23
+ * float: 23.3
+
 ## Custom types (TODO)
 ## Import, grouping functionality (TODO)
 
