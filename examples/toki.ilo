@@ -15,11 +15,24 @@ nasin li nimi open {
     o toki e "tu en wan li seme e " e nanpa + wan e pini
 
     # if statement
-    # (nanpa == wan) la {
-    #     o toki e "nanpa li seme e wan"
-    # } ante {
-    #     o toki e "nanpa li seme ala e wan"
-    # }
+    (nanpa = wan) la {
+        o toki e "nanpa li seme e wan" e pini
+    } ante {
+        o toki e "nanpa li seme ala e wan" e pini
+    }
+
+    # Booleans
+    nimi nimi_lon li lon
+    nimi nimi_ala li lon ala
+
+    (nimi_lon) la {
+        o toki e "nimi_lon li lon" e pini
+        (nimi_lon en nimi_ala) la {
+            o toki e "nimi_lon en nimi_ala li lon" e pini
+        } ante {
+            o toki e "nimi_lon en nimi_ala li lon ala" e pini
+        }
+    }
 
     # loop statement
     # function call statement
