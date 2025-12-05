@@ -1,5 +1,31 @@
 nasin li nimi toki_pona {
-    o toki e "toki pona"
+    o toki e pini
+    o toki e "#############" e pini
+    o toki e "# toki pona #" e pini
+    o toki e "#############" e pini
+    o toki e pini
+}
+
+nasin li nimi nanpa_nasa {
+    o toki e "mi insa e nasa_nanpa nasin" e pini
+    nimi n1 li 4
+    o pana e n1
+}
+
+nasin li nimi nimi_mute_nanpa_nasa {
+    o pana e "nanpa nasa"
+}
+
+nasin li nimi nanpa_en_nanpa
+li kama jo e nanpa n1 e nanpa n2 {
+    # TODO: arguments Not implemented yet
+    # o pana e n1 + n2
+}
+
+nasin li nimi toki_e_ni
+li kama jo e nimi nimi_ni {
+    # TODO: arguments Not implemented yet
+    # o toki e nimi_ni e pini
 }
 
 nasin li nimi open {
@@ -7,18 +33,18 @@ nasin li nimi open {
 
     # var declaration
     o toki e pini
-    nimi nanpa li 5
-    o toki e "nanpa li " e nanpa e pini
+    nimi n1 li 5
+    o toki e "nanpa li " e n1 e pini
 
     # var assignement and basic operation
     o toki e pini
-    nimi nanpa li 2
+    nimi n1 li 2
     nimi wan li 1
-    o toki e "tu en wan li seme e " e nanpa + wan e pini
+    o toki e "tu en wan li seme e " e n1 + wan e pini
 
     # if statement
     o toki e pini
-    (nanpa = wan) la {
+    (n1 = wan) la {
         o toki e "nanpa li seme e wan" e pini
     } ante {
         o toki e "nanpa li seme ala e wan" e pini
@@ -41,11 +67,11 @@ nasin li nimi open {
     # loop statement
     o toki e pini
     o toki e "nanpa li lili luka la o sin" e pini
-    nimi nanpa li 0
+    nimi n1 li 0
     o sin e ni {
-        o toki e " - sin la nanpa li " e nanpa e pini
-        nimi nanpa li (nanpa + 1)
-        (nanpa = 5) la {
+        o toki e " - sin la nanpa li " e n1 e pini
+        nimi n1 li (n1 + 1)
+        (n1 = 5) la {
             o toki e " - o pini" e pini
             o pini
         }
@@ -66,4 +92,14 @@ nasin li nimi open {
     }
 
     # function call statement
+    o toki_pona
+
+    # Function call with return statement
+    nimi n1 li o nanpa_nasa
+    o toki e "nanpa nasa li " e n1 e pini
+    nimi nimi_mute li o nimi_mute_nanpa_nasa
+    o toki e "nanpa nasa li " e nimi_mute e pini
+
+    # Function call with return statement and parameters
+    # Recursive function call
 }

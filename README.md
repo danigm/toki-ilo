@@ -57,28 +57,25 @@ To define a function we use the "nasin li nimi" keyword combination.
 
 Definition:
 ```
-nasin li nimi IDENT
-(kama jo (e ijo TYPE)+)?
-(pana ijo TYPE)?
+nasin li nimi IDENT (li kama jo (e TYPE IDENT)+)?
 {
+    (o pana e EXPR)?
 }
 ```
 
 Examples:
 ```
 # print function definition (toki)
-nasin li nimi toki
-kama jo e ijo nimi mute
+nasin li nimi toki li kama jo e nimi s
 {
 ...
 }
 
 # read document function definition (lukin_lipu)
-nasin li nimi lukin_lipu
-kama jo e ijo nimi mute
-pana ijo lipu
+nasin li nimi lukin_lipu li kama jo e nimi lipu
 {
 ...
+    o pana e 4
 }
 ```
 
@@ -102,7 +99,7 @@ Definition:
 ```
 o sin e ni {
     EXPR*
-    pakala
+    o pini
 }
 ```
 
@@ -126,9 +123,9 @@ If-else:
 
 ## Basic Types
 
- * string: "abc"
- * integer: 23
- * float: 23.3
+ * string: "abc" -> nimi
+ * integer: 23 -> nanpa
+ * float: 23.3 -> nanpa jaki
 
 ## Custom types (TODO)
 ## Import, grouping functionality (TODO)
