@@ -1,5 +1,48 @@
 # toki pona programming language
 
+## How to build
+
+The compiler is a gcc-frontend, so you need to compile the gcc submodule.
+
+```
+$ git submodule init gcc
+$ git submodule update gcc # This will take some time, the repo is big
+```
+
+Download prerequisites:
+
+```
+$ cd gcc
+$ ./contrib/download_prerequisites
+$ cd -
+```
+
+After downloading the source code you can build:
+
+```
+$ mkdir build install
+$ cd build
+$ ../gcc/configure --prefix=$(pwd)/../install --disable-bootstrap --enable-languages=c,c++,toki
+$ make -j$(getconf _NPROCESSORS_ONLN)
+$ make install
+$ cd -
+```
+
+After building we have now the compiler so we can compile toki.ilo source code:
+
+```
+$ install/bin/gcctoki -o toki examples/toki.ilo
+$ ./toki
+ma ale o, toki!
+```
+
+## Syntax highlighting in vim
+
+```
+$ cp toki.vim $HOME/.vim/syntax/
+$ echo "autocmd BufRead *.ilo set syntax=toki" >> $HOME/.vimrc
+```
+
 ## Hello world: 󱥬 󱥔
 
 ```
@@ -134,4 +177,6 @@ If-else:
 ### Reference
 
 * The gcc frontend is built using following this tutorial:
-  https://thinkingeek.com/2016/01/06/tiny-gcc-front-part-1/
+  https://thinkingeek.com/2016/01/05/tiny-gcc-front-part-1/
+* GCC Internal documentation about generic:
+  https://gcc.gnu.org/onlinedocs/gccint/#toc-GENERIC-1
