@@ -18,14 +18,26 @@ nasin li nimi nimi_mute_nanpa_nasa {
 
 nasin li nimi nanpa_en_nanpa
 li kama jo e nanpa n1 e nanpa n2 {
-    # TODO: arguments Not implemented yet
-    # o pana e n1 + n2
+    o pana e n1 + n2
 }
 
 nasin li nimi toki_e_ni
 li kama jo e nimi nimi_ni {
-    # TODO: arguments Not implemented yet
-    # o toki e nimi_ni e pini
+    o toki e nimi_ni e pini
+}
+
+nasin li nimi Fiponaki li kama jo e nanpa n1 {
+    nimi r1 li 0
+    nimi r2 li 0
+    nimi rx li 1
+    (n1 <= 1) la {
+        nimi rx li n1
+    } ante {
+        nimi r1 li o Fiponaki e (n1 - 1)
+        nimi r2 li o Fiponaki e (n1 - 2)
+        nimi rx li r1 + r2
+    }
+    o pana e rx
 }
 
 nasin li nimi open {
@@ -80,6 +92,7 @@ nasin li nimi open {
     # deep loop statement
     o toki e pini
     nimi nanpa1 li 0
+    nimi nanpa2 li 0
     o sin e ni {
         (nanpa1 = 3) la { o pini }
         nimi nanpa2 li 0
@@ -101,5 +114,20 @@ nasin li nimi open {
     o toki e "nanpa nasa li " e nimi_mute e pini
 
     # Function call with return statement and parameters
+
+    nimi n1 li o nanpa_en_nanpa e 2 e 3
+    o toki e "2 en 3 li sama e " e n1 e pini
+    o toki_e_ni e "pona"
+    o toki e pini
+
     # Recursive function call
+    # TODO: Fix this
+    nimi i li 0
+    o sin e ni {
+        (i = 10) la { o pini }
+        nimi i li i + 1
+
+        nimi f li o Fiponaki e i
+        o toki e " Fiponaki " e i e ": " e f e pini
+    }
 }
