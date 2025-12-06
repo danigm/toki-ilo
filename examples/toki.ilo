@@ -27,17 +27,13 @@ li kama jo e nimi nimi_ni {
 }
 
 nasin li nimi Fiponaki li kama jo e nanpa n1 {
-    nimi r1 li 0
-    nimi r2 li 0
-    nimi rx li 1
     (n1 <= 1) la {
-        nimi rx li n1
-    } ante {
-        nimi r1 li o Fiponaki e (n1 - 1)
-        nimi r2 li o Fiponaki e (n1 - 2)
-        nimi rx li r1 + r2
+        o pana e n1
     }
-    o pana e rx
+
+    nimi r1 li o Fiponaki e (n1 - 1)
+    nimi r2 li o Fiponaki e (n1 - 2)
+    o pana e r1 + r2
 }
 
 nasin li nimi open {
@@ -121,7 +117,6 @@ nasin li nimi open {
     o toki e pini
 
     # Recursive function call
-    # TODO: Fix this
     nimi i li 0
     o sin e ni {
         (i = 10) la { o pini }
